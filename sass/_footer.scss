@@ -1,0 +1,53 @@
+.footer {
+    background-color: $color-primary;
+    padding: 3.5rem 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $bp-mobile) {
+        grid-template-columns: max-content;
+        grid-gap: 3rem;
+        padding: 3.5rem 4rem;
+        justify-content: center;       
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        font-family: $font-display;
+        color: $color-secondary;
+        letter-spacing: 2px;
+        opacity: .85;
+        
+        @media screen and (max-width: $bp-mobile) {
+            font-weight: 300;
+        }
+    }
+
+    &__icon-container {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        grid-gap: 2rem;
+
+        @media screen and (max-width: $bp-mobile) {
+            justify-content: center;
+        }
+    }
+
+    &__icon-link, &__icon-link:visited {
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        opacity: .85;
+        transition: .1s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.search {
+  display: none;
+  grid-template-columns: max-content;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  grid-gap: 2.5rem;
+  position: relative;
+
+  &__input-loading {
+    position: absolute;
+    left: -5rem;
+    top: 10rem;
+    opacity: .8;
+
+    @media screen and (max-width: $bp-mobile) {
+      display: none;
+    }
+  }
+
+    &__title {
+      font-size: 3.6rem;
+      font-family: $font-display;
+      justify-self: start;
+      z-index: 2;
+
+      @media screen and (max-width: $bp-mobile) {
+        font-size: 3.4rem;     
+      }
+    }
+
+    &__icon {
+      width: 25rem;
+      height: 25rem;
+      opacity: 0.4;
+      position: absolute;
+      top: 5%;
+      left: 62%;
+      right: 0;
+      transform: scale(1.3);
+
+      @media screen and (max-width: $bp-mobile) {
+        display: none;     
+      }
+    }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    border-radius: 5px;
+    filter: drop-shadow(0.4rem 2.4rem 6rem rgba(#6d8dad, 0.3));
+    position: relative;
+    z-index: 2;
+
+        &--top {
+          position: relative;
+          display: none;
+          
+          @media screen and (max-width: $bp-mobile) {
+            justify-self: center;
+        }
+
+            .searchTop__input-loading {
+              position: absolute;
+              left: -4rem;
+              top: 1.2rem;
+              opacity: .8;
+
+              @media screen and (max-width: $bp-mobile) {
+                display: none;
+            }
+            }
+        }
+  }
+
+  &__input {
+    background-color: $color-secondary;
+    border: none;
+    outline: none;
+    width: 45rem;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: $font-display;
+    letter-spacing: 2px;
+    color: $color-font-primary;
+    border-radius: 5px 0 0 5px;
+
+    @media screen and (max-width: $bp-mobile) {
+      width: 30rem;       
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-font-ternary;
+      font-size: 1.4rem;
+      font-family: $font-display;
+      caret-color: $color-font-primary;
+    }
+
+    &--top {
+      padding: 1.5rem;
+      font-size: 1.4rem;
+      width: 44rem;
+
+      @media screen and (max-width: $bp-mobile) {
+        width: 30rem;
+      }
+    }
+  }
+
+  &__button {
+    border: none;
+    outline: none;
+    padding: 2rem 3rem;
+    border-radius: 0 5px 5px 0;
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: $color-base;
+    background-color: $color-primary;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+
+    @media screen and (max-width: $bp-mobile) {
+      padding: 1rem 2rem;       
+    }
+
+    &--top {
+      padding: 1.5rem;
+    }
+  }
+}
+
+.toggle {
+  display: grid;
+}

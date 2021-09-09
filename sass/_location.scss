@@ -1,0 +1,119 @@
+.location {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  min-height: 100vh;
+  grid-gap: 3rem;
+  padding: 3rem;
+
+  &__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    justify-self: start;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.1s ease;
+
+    @media screen and (max-width: $bp-mobile) {
+      background-color: rgba($color-ternary, 0.4);
+    }
+
+    &:hover {
+      background-color: rgba($color-ternary, 0.4);
+
+      @media screen and (max-width: $bp-mobile) {
+        background-color: rgba($color-ternary, 0.4);
+      }
+    }
+
+    &:active {
+      background-color: rgba($color-ternary, 0.6);
+
+      @media screen and (max-width: $bp-mobile) {
+        background-color: rgba($color-ternary, 0.4);
+        transform: scale(0.95);
+      }
+    }
+
+    &-icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 1rem;
+    }
+
+    &-text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $color-primary;
+    }
+  }
+
+  &__blob-icon {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    top: -52%;
+    left: -10%;
+    opacity: 0.4;
+    filter: drop-shadow(0.4rem 2.4rem 6rem rgba(#6d8dad, 0.3));
+    z-index: -1;
+
+    @media screen and (max-width: $bp-mobile) {
+      width: 16rem;
+      height: 16rem;
+      top: -30%;
+      left: 55%;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 2rem;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: $bp-mobile) {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+  }
+
+  &__title {
+    font-size: 3.8rem;
+    font-family: $font-display;
+
+    @media screen and (max-width: $bp-mobile) {
+      font-size: 3.4rem;
+    }
+  }
+
+  &__btn {
+    outline: none;
+    border: none;
+    color: $color-base;
+    background-color: $color-primary;
+    font-size: 1.4rem;
+    font-family: $font-display;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.15s ease;
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}

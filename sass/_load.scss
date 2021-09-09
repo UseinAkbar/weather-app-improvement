@@ -1,0 +1,33 @@
+.box-load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-base;
+    display: grid;
+    grid-template-columns: max-content;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    z-index: 5;
+
+    .icon-load-blob, .icon-loading {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .icon-load-blob {
+        width: 16rem;
+        height: 16rem;
+        fill: $color-ternary;
+        opacity: .9;
+        filter: drop-shadow(0.4rem 2.4rem 6rem rgba(#6d8dad, 0.25));
+    }
+
+    .icon-loading {
+        overflow: visible;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,68 @@
+.weather {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+    min-height: 100vh;
+    padding: 3rem;
+
+    &__topbar {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: min-content;
+        justify-content: space-between;
+        
+        @media screen and (max-width: $bp-mobile) {
+            grid-template-columns: 1fr;
+            justify-items: start;
+            grid-gap: 3rem;
+        }
+
+    }
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.2rem;
+        border-radius: 5px;
+        -webkit-tap-highlight-color: transparent;
+        transition: .1s ease;
+
+        @media screen and (max-width: $bp-mobile) {
+            background-color: rgba($color-ternary, .4);
+        }
+
+        &:hover {
+            background-color: rgba($color-ternary, .4);
+
+            @media screen and (max-width: $bp-mobile) {
+                background-color: rgba($color-ternary, .4);
+            }
+        }
+
+        &:active {
+            background-color: rgba($color-ternary, .6);
+
+            @media screen and (max-width: $bp-mobile) {
+                background-color: rgba($color-ternary, .4);
+                transform: scale(.95);
+            }
+        }
+
+        &-icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-right: 1rem;
+        }
+
+        &-text {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $color-primary;
+        }
+    }
+}
+
+.weather__gap {
+    grid-gap: 3rem;
+}

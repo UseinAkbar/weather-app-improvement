@@ -1,0 +1,62 @@
+// FONT
+$font-primary: 'Roboto', sans-serif;
+$font-display: 'Poppins', sans-serif;
+
+// COLOR
+$color-base: #F3F9FB;
+$color-primary: #113F67;
+$color-secondary: #fdfeff;
+$color-ternary: #87C0CD;
+$color-block: #151b27;
+$color-font-primary: #082032;
+$color-font-secondary: #495464;
+$color-font-ternary: #8b90a0;
+
+//BREAKPOINTS
+$bp-tablet: 50em; //800px
+$bp-mobile: 31.25em; //500px
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-tablet) {
+    font-size: 56.25%; //9px
+  }
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 50%; //8px
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  color: $color-font-primary;
+  line-height: 1.6;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: min-content;
+  background-color: $color-base;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 92vh;
+
+  @media screen and (max-width: $bp-mobile) {
+   grid-template-rows: 94vh;         
+  }
+}

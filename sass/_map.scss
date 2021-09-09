@@ -1,0 +1,51 @@
+.map {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30rem;
+  grid-gap: 4rem;
+  align-items: center;
+  justify-items: center;
+  border-radius: 5px;
+  filter: drop-shadow(0.4rem 2.4rem 6rem rgba(#6d8dad, 0.3));
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    color: $color-font-primary;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    fill: $color-font-primary;
+    transform: translateY(-1px);
+
+      @media screen and (max-width: $bp-mobile) {
+        width: 4rem;
+        height: 4rem;
+    }
+  }
+
+  &__address {
+    font-size: 2rem;
+    font-weight: 300;
+
+    @media screen and (max-width: $bp-mobile) {
+      text-align: justify;
+      font-size: 1.8rem;
+  }
+  }
+
+  #leaf {
+    width: 60%;
+    height: 100%;
+    border-radius: 5px;
+    filter: grayscale(.2);
+
+    @media screen and (max-width: $bp-mobile) {
+      width: 100%;
+  }
+  }
+}

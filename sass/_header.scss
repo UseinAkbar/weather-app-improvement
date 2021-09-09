@@ -1,0 +1,112 @@
+.header {
+    font-family: $font-display;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 0 7rem;
+
+    @media screen and (max-width: $bp-mobile) {
+        grid-template-columns: 1fr;
+        padding: 0 4rem;;
+    }
+
+    &__heading-container {
+        display: grid;
+        grid-template-columns: minmax(min-content, max-content);
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+        justify-self: start;
+
+        @media screen and (max-width: $bp-mobile) {
+            // grid-column: 1/2;
+            // grid-row: 2/3;
+        }
+    }
+
+    &__heading {
+        font-size: 6.2rem;
+        font-weight: 600;
+
+        @media screen and (max-width: $bp-mobile) {
+            font-size: 4.2rem;
+        }
+    }
+
+    &__subheading {
+        transform: translateY(-.5rem);
+        font-size: 2rem;
+        font-weight: 400;
+        color: $color-font-ternary;
+
+        @media screen and (max-width: $bp-mobile) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__cta, &__cta:visited {
+        text-decoration: none;
+        padding: 1.2rem 3.4rem;
+        border-radius: 5px;
+        font-size: 1.4rem;
+        color: $color-base;
+        background-color: $color-primary;
+        justify-self: start;
+        display: flex;
+        -webkit-tap-highlight-color: transparent;
+        transition: .15s ease;
+
+        @media screen and (max-width: $bp-mobile) {
+            padding: 1.4rem 3.4rem;
+        }        
+
+        &:active {
+            transform: scale(.95);
+        }
+
+        .header__cta--text {
+            font-weight: 500;
+            margin-right: .6rem;
+        }
+    }
+
+    &__icon-container {
+        display: grid;
+        grid-template-columns: max-content;
+        justify-items: center;
+        align-items: center;
+        justify-self: end;
+
+        @media screen and (max-width: $bp-mobile) {
+            display: none;
+        }
+
+        .header__icon {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            height: 30rem;
+
+            @media screen and (max-width: $bp-mobile) {
+                height: 24rem;
+            }
+
+            &--1 {
+                z-index: 2;
+                justify-self: start;
+                transform: translateX(1.2rem);
+                filter: drop-shadow(.4rem 2.4rem 6rem rgba(#6d8dad, .4));
+            }
+
+            &--2 {
+                // filter: drop-shadow(.4rem 2.4rem 6rem rgba(#6d8dad, .25));
+                width: 37rem;
+                height: 37rem;
+                fill: rgba($color-primary, 1);
+
+                @media screen and (max-width: $bp-mobile) {
+                    width: 34rem;
+                    height: 34rem;
+                }
+            }
+        }
+    }
+}
